@@ -3,7 +3,6 @@ import PlanetChartHeader from './PlanetChartHeader';
 import PlanetChartFooter from './PlanetChartFooter';
 import PLanetChartLegend from './PLanetChartLegend';
 import { makeStyles } from '@material-ui/core';
-import { mergeClasses } from '@material-ui/styles';
 
 
 
@@ -12,10 +11,7 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        height: '100%',
-        background: 'black',
-        borderRadius: '15px'
-
+        height: '80%',
     }
 }))
 const PlanetChart = ({ planetsToCompare }) => {

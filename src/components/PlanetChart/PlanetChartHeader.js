@@ -12,7 +12,7 @@ const useStyles = makeStyles((props) => ({
     },
     populationStyle: {
         fontSize: '18px',
-        color: '#ed6c19',
+        color: '#e6c826',
         fontFamily: 'Roboto',
         fontWeight: '400',
         letterSpacing: '1px'

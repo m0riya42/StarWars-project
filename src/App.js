@@ -31,7 +31,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    console.log('change in: ', vehicles)
+    // console.log('change in: ', vehicles)
     vehicleNextCall && getVehicles({ url: vehicleNextCall })
   }, [vehicles])
 
@@ -48,7 +48,7 @@ function App() {
 
           {isGotAllVehiclsFromAPI() && < VehicleDetails vehicles={vehicles} />}
           <br />
-          <PlanetDetails style={{ height: '300px', padding: '8px' }} />
+          <PlanetDetails style={{ height: '300px' }} />
 
         </div>
 

@@ -11,6 +11,10 @@
   /* text-shadow: 4px 4px 4px #aaa; */
 }
 
+body {
+  cursor: url(../public/assests/CURSOR.cur), auto;
+}
+
 h1 {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #e6c826;

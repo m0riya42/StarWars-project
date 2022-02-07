@@ -12,7 +12,7 @@ const VehicalTable = ({ VehicMaxPopulation }) => {
             VehicMaxPopulation &&
             <TableContainer component={Paper} style={{ borderRadius: '15px' }}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                    < VehicalTableHeader VehicalName={VehicMaxPopulation.name} />
+                    <VehicalTableHeader VehicalName={VehicMaxPopulation.name} />
                     <VehicalTableBody VehicMaxPopulation={VehicMaxPopulation} />
                 </Table>
             </TableContainer>

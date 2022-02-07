@@ -28,6 +28,9 @@ const PlanetDetails = (props) => {
     /*             Return              */
     /********************************* */
     return (<div style={newStyle}>
+        <span style={{ fontFamily: 'Star Jedi', color: '#ed6c19', letterSpacing: '8px', textAlign: 'left' }}>
+            PLanets Compare:
+        </span>
         <PlanetChart planetsToCompare={planetsToCompare} />
     </div>)
 }
