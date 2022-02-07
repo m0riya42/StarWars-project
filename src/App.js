@@ -18,7 +18,14 @@ function App() {
     return vehiclesToAdd
   }
 
-  const getVehicles = ({ url }) => getApiRequest({ url, handleFunction: handleSetVehicles })
+  const getVehicles = ({ url }) => getApiRequest({ url, handleFunction: handleSetVehicles });
+
+  const isGotAllVehiclsFromAPI = () => !vehicleNextCall && vehicleLength === vehicles.length;
+
+
+  /********************************* */
+  /*        Use Effects              */
+  /********************************* */
   useEffect(() => {
     !vehicles.length && getVehicles({ url: GET_VEHICAL_REQUEST }).then(res => setVehicleLength(res.count));
   }, [])
@@ -28,16 +35,20 @@ function App() {
     vehicleNextCall && getVehicles({ url: vehicleNextCall })
   }, [vehicles])
 
+
+  /********************************* */
+  /*             Return              */
+  /********************************* */
+
   return (
     <div className="App">
       <h1>Star Wars!</h1>
       <div style={{ width: '100%', justifyContent: 'center', display: 'flex' }}>
         <div style={{ width: '65%' }}>
-          {(!vehicleNextCall && vehicleLength === vehicles.length) &&
-            < VehicleDetails vehicles={vehicles} />
-          }
+
+          {isGotAllVehiclsFromAPI() && < VehicleDetails vehicles={vehicles} />}
           <br />
-          <PlanetDetails style={{ height: '600px', background: 'black' }} />
+          <PlanetDetails style={{ height: '300px', padding: '8px' }} />
 
         </div>
 

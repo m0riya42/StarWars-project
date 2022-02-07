@@ -5,7 +5,7 @@
 .App {
   text-align: center;
   font-family: "Star Jedi", arial;
-  font-size: 48px;
+  font-size: 28px;
   color: #e6c826;
   letter-spacing: 10px;
   /* text-shadow: 4px 4px 4px #aaa; */
@@ -19,6 +19,9 @@ h1 {
   color: transparent;
 }
 
+p {
+  margin: 1px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

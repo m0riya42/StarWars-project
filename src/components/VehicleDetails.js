@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { getApiRequest, getPilotsInfo } from '../apiRequests'
-import PlanetDetails from './PlanetDetails';
-import VehicalTable from './VehicalTable';
+import { getPilotsInfo } from '../apiRequests'
+import VehicalTable from './Vehical Table/VehicalTable';
 
 
 const isEmptyObject = (obj) => Object.keys(obj).length === 0;
@@ -33,6 +32,9 @@ const VehicleDetails = ({ vehicles }) => {
 
         setCalcVehicInfo(vecAcc);
     }
+    /********************************* */
+    /*        Use Effects              */
+    /********************************* */
 
     useEffect(() => {
         initCalculatedVehicles();
@@ -42,14 +44,15 @@ const VehicleDetails = ({ vehicles }) => {
         const getMaxPopulationObj = (obj1, obj2) => obj1.sumPopulation > obj2.sumPopulation ? obj1 : obj2;
         setVehicMaxPopulation(calcVehicInfo?.reduce((acc, curr) => isEmptyObject(acc) ? curr : getMaxPopulationObj(curr, acc), {}))
 
-        // console.log('filter', calcVehicInfo.filter(vehic => vehic.sumPopulation !== 0));
-
     }, [calcVehicInfo])
 
     useEffect(() => {
         console.log(VehicMaxPopulation);
     }, [VehicMaxPopulation])
-    // const [abc, setAbc] = useState();
+
+    /********************************* */
+    /*             Return              */
+    /********************************* */
     return (<VehicalTable VehicMaxPopulation={VehicMaxPopulation} />);
 }
 
